@@ -30,9 +30,6 @@ public class LoginController implements Initializable {
         if (Main.MD5(user + pass + Main.getMac()).equals("950e04400d66d9b83538ca59c4426102")) {
             closeStage();
             loadMain();
-        } else if (Main.MD5(user + pass + Main.getMac()).equals("3de9ff940c17788ceb6400cb4aa87e90")) {
-            closeStage();
-            loadMain();
         } else {
             username.getStyleClass().add("wrong-credentials");
             password.getStyleClass().add("wrong-credentials");
