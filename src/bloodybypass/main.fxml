@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.*?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.layout.*?>
+<StackPane fx:id="rootPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+           prefHeight="625.0" prefWidth="1000.0" styleClass="custom-pane" stylesheets="@/resources/dark-theme.css"
+           xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1"
+           fx:controller="bloodybypass.MainController">
+    <children>
+        <JFXDrawer fx:id="drawer" defaultDrawerSize="150.0" resizableOnDrag="true" resizeContent="true"
+                   styleClass="jfx-drawer"/>
+        <AnchorPane fx:id="rootAnchorPane" prefHeight="200.0" prefWidth="200.0">
+            <children>
+                <AnchorPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                            AnchorPane.topAnchor="0.0">
+                    <children>
+                        <JFXTabPane fx:id="mainTabPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                            <tabs>
+                                <Tab fx:id="mouseTab" closable="false" styleClass="tab-main" text="Bloody Mouse">
+                                    <content>
+                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                            <children>
+                                                <VBox prefHeight="412.0" prefWidth="557.0" AnchorPane.bottomAnchor="0.0"
+                                                      AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                                      AnchorPane.topAnchor="0.0">
+                                                    <children>
+                                                        <HBox fx:id="mouse_info" alignment="CENTER" prefHeight="200.0"
+                                                              prefWidth="1000.0">
+                                                            <children>
+                                                                <VBox alignment="CENTER" spacing="20.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="20.0" left="20.0" right="20.0"
+                                                                                top="20.0"/>
+                                                                    </HBox.margin>
+                                                                    <children>
+                                                                        <FontAwesomeIconView glyphName="GEAR"
+                                                                                             size="30"/>
+                                                                        <JFXTextField fx:id="mouseIDInput"
+                                                                                      labelFloat="true"
+                                                                                      onAction="#loadMouseInfo"
+                                                                                      prefHeight="26.0"
+                                                                                      prefWidth="230.0"
+                                                                                      promptText="Mouse ID"/>
+                                                                    </children>
+                                                                </VBox>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="20.0" left="20.0" right="20.0"
+                                                                        top="20.0"/>
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox fx:id="bypass_info" alignment="CENTER" layoutX="10.0"
+                                                              layoutY="10.0" prefHeight="200.0" prefWidth="1000.0">
+                                                            <children>
+                                                                <VBox alignment="CENTER" spacing="20.0">
+                                                                    <HBox.margin>
+                                                                        <Insets bottom="20.0" left="20.0" right="20.0"
+                                                                                top="20.0"/>
+                                                                    </HBox.margin>
+                                                                    <children>
+                                                                        <FontAwesomeIconView glyphName="PLUG"
+                                                                                             size="30"/>
+                                                                        <JFXTextField fx:id="bypassTimeInput"
+                                                                                      labelFloat="true"
+                                                                                      onAction="#loadBypassTime"
+                                                                                      prefWidth="230.0"
+                                                                                      promptText="Bypass Time (in seconds)"/>
+                                                                    </children>
+                                                                </VBox>
+                                                            </children>
+                                                            <VBox.margin>
+                                                                <Insets bottom="5.0" left="20.0" right="20.0"/>
+                                                            </VBox.margin>
+                                                        </HBox>
+                                                        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                            <children>
+                                                                <JFXButton fx:id="btnBypass"
+                                                                           onAction="#loadBypassOperation"
+                                                                           onKeyPressed="#handleBypassButtonKeyPress"
+                                                                           prefHeight="44.0" prefWidth="151.0"
+                                                                           text="Bypass">
+                                                                    <HBox.margin>
+                                                                        <Insets/>
+                                                                    </HBox.margin>
+                                                                    <padding>
+                                                                        <Insets bottom="10.0" left="10.0" right="10.0"
+                                                                                top="10.0"/>
+                                                                    </padding>
+                                                                </JFXButton>
+                                                            </children>
+                                                        </HBox>
+                                                    </children>
+                                                </VBox>
+                                            </children>
+                                        </AnchorPane>
+                                    </content>
+                                </Tab>
+                            </tabs>
+                        </JFXTabPane>
+                    </children>
+                </AnchorPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>
