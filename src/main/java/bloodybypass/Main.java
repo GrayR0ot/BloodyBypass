@@ -1,6 +1,8 @@
 package bloodybypass;
 
+import com.jfoenix.controls.JFXPasswordField;
 import javafx.application.Application;
+import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -17,10 +19,12 @@ import java.net.UnknownHostException;
 
 public class Main extends Application {
 
+    @FXML
+    private JFXPasswordField macAddress;
+
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("/bloodybypass/login.fxml"));
-
+        Parent root = FXMLLoader.load(getClass().getResource("/login.fxml"));
         Scene scene = new Scene(root);
 
         stage.setScene(scene);
