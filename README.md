@@ -11,4 +11,4 @@ Specifications:
   - JavaFX Framework
 
 Make sure having maven installed
-Maven compile: mvn clean package assembly:single
+Maven compile: *mvn clean package assembly:single*
